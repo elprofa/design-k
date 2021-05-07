@@ -1,28 +1,21 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import { Button} from "@chakra-ui/react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-const IndexPage = () => (
+import { Box, Text } from "@chakra-ui/react"
+import { Grid, GridItem } from "@chakra-ui/react"
+const IndexPage = (props) => (
   <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Grid templateColumns="repeat(4, 1fr)" gap={0}>
+      <Box  h="100vh" bg="#f7931e" _hover={{ backgroundColor: '#fff',width:"50vw",flex: 3,transition: 1+"s"  }}>
+       
+      </Box>
+      <Box  h="100vh" bg="#42210b" _hover={{ backgroundColor: '#fff',width:"50vw",flex: 3,transition: 1+"s"  }} ></Box>
+      <Box  h="100vh" bg="#c1272d" _hover={{ backgroundColor: '#fff',width:"50vw",flex: 3,transition: 1+"s"  }} ></Box>
+      <Box  h="100vh" bg="#f15a24" _hover={{ backgroundColor: '#fff',width:"50vw",flex: 3,transition: 1+"s"  }} ></Box>
+    </Grid>
   </Layout>
 )
 
